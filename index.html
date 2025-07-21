@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrightWorld - Premium LED Lighting Solutions</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <style>
+      :root {
+        --primary-color: #ffd700;
+        --secondary-color: #333;
+        --accent-color: #ff6b35;
+        --light-bg: #f8f9fa;
+      }
+
+      .navbar-brand img {
+        height: 50px;
+        transition: transform 0.3s;
+      }
+
+      .navbar-brand:hover img {
+        transform: scale(1.1);
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23000" width="1200" height="600"/><circle fill="%23FFD700" cx="200" cy="150" r="50" opacity="0.3"/><circle fill="%23FFD700" cx="800" cy="300" r="80" opacity="0.2"/><circle fill="%23FFD700" cx="1000" cy="100" r="40" opacity="0.3"/></svg>');
+        background-size: cover;
+        color: white;
+        padding: 100px 0;
+      }
+
+      .product-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        height: 100%;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .brand-logo {
+        max-width: 150px;
+        height: 80px;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.3s;
+      }
+
+      .brand-logo:hover {
+        filter: grayscale(0%);
+      }
+
+      .gallery-item {
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .gallery-item img {
+        transition: transform 0.3s;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .download-btn {
+        background: linear-gradient(
+          45deg,
+          var(--primary-color),
+          var(--accent-color)
+        );
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 25px;
+        transition: all 0.3s;
+      }
+
+      .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+      }
+
+      .navbar {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .section-padding {
+        padding: 80px 0;
+      }
+
+      .bg-light-custom {
+        background-color: var(--light-bg);
+      }
+
+      .text-gold {
+        color: var(--primary-color);
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: var(--secondary-color);
+      }
+
+      .btn-primary:hover {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#home">
+          <img
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 50'%3E%3Ctext x='10' y='30' font-size='24' font-weight='bold' fill='%23FFD700'%3EBrightWorld%3C/text%3E%3Ccircle cx='150' cy='25' r='15' fill='%23FFD700'/%3E%3C/svg%3E"
+            alt="BrightWorld"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#bulbs">LED Bulbs</a></li>
+                <li>
+                  <a class="dropdown-item" href="#spotlights">Spot Lights</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#decoration"
+                    >Decoration Lights</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#smart">Smart Lights</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#brands">Brands</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#feedback">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container text-center">
+        <h1 class="display-3 mb-4 animate__animated animate__fadeInDown">
+          Welcome to BrightWorld
+        </h1>
+        <p class="lead mb-5">
+          Illuminate Your World with Premium LED Solutions
+        </p>
+        <div class="row mt-5">
+          <div class="col-md-3 col-6 mb-3">
+            <img
+              src="./asset/images/images.jpg"
+              class="img-fluid rounded-circle"
+              alt="LED Bulb"
+            />
+          </div>
+          <div class="col-md-3 col-6 mb-3">
+            <img
+              src="./asset/images/spotLight.jpg"
+              class="img-fluid rounded-circle"
+              alt="Spot Light"
+            />
+          </div>
+          <div class="col-md-3 col-6 mb-3">
+            <img
+              src="./asset/images/smartLED.jpg"
+              class="img-fluid rounded-circle"
+              alt="Decoration Light"
+            />
+          </div>
+          <div class="col-md-3 col-6 mb-3">
+            <img
+              src="./asset/images/decorationLights.jpg"
+              class="img-fluid rounded-circle"
+              alt="Smart Light"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="section-padding bg-light-custom">
+      <div class="container">
+        <h2 class="text-center mb-5">Our LED Categories</h2>
+        <div class="row">
+          <!-- LED Bulbs -->
+          <div class="col-lg-3 col-md-6 mb-4" id="bulbs">
+            <div class="card product-card">
+              <img
+                src="./asset/images/images.jpg"
+                class="card-img-top"
+                alt="LED Bulb"
+              />
+              <div class="card-body">
+                <h5 class="card-title">LED Bulbs</h5>
+                <p class="card-text">
+                  Energy-efficient LED bulbs for every room
+                </p>
+                <ul class="list-unstyled">
+                  <li>• 5W-25W options</li>
+                  <li>• Warm & Cool White</li>
+                  <li>• 50,000 hours lifespan</li>
+                </ul>
+                <p class="h5 text-gold">From 250 Rs</p>
+                <button class="btn btn-primary download-btn">
+                  <i class="bi bi-download"></i> Download Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spot Lights -->
+          <div class="col-lg-3 col-md-6 mb-4" id="spotlights">
+            <div class="card product-card">
+              <img
+                src="./asset/images/spotLight.jpg"
+                class="card-img-top"
+                alt="Spot Light"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Spot Lights</h5>
+                <p class="card-text">
+                  Directional lighting for accent displays
+                </p>
+                <ul class="list-unstyled">
+                  <li>• 3W-12W power</li>
+                  <li>• Adjustable beam angle</li>
+                  <li>• Aluminum housing</li>
+                </ul>
+                <p class="h5 text-gold">From 190 Rs</p>
+                <button class="btn btn-primary download-btn">
+                  <i class="bi bi-download"></i> Download Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decoration Lights -->
+          <div class="col-lg-3 col-md-6 mb-4" id="decoration">
+            <div class="card product-card">
+              <img
+                src="./asset/images/decorationLights.jpg"
+                class="card-img-top"
+                alt="Decoration Light"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Decoration Lights</h5>
+                <p class="card-text">
+                  Creative lighting for parties and events
+                </p>
+                <ul class="list-unstyled">
+                  <li>• RGB color changing</li>
+                  <li>• Remote control included</li>
+                  <li>• Waterproof IP65</li>
+                </ul>
+                <p class="h5 text-gold">From 150 Rs</p>
+                <button class="btn btn-primary download-btn">
+                  <i class="bi bi-download"></i> Download Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Smart Lights -->
+          <div class="col-lg-3 col-md-6 mb-4" id="smart">
+            <div class="card product-card">
+              <img
+                src="./asset/images/smartLED.jpg"
+                class="card-img-top"
+                alt="Smart Light"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Smart Lights</h5>
+                <p class="card-text">WiFi enabled smart lighting solutions</p>
+                <ul class="list-unstyled">
+                  <li>• Voice control compatible</li>
+                  <li>• Mobile app control</li>
+                  <li>• Scheduling & scenes</li>
+                </ul>
+                <p class="h5 text-gold">From 300 Rs</p>
+                <button class="btn btn-primary download-btn">
+                  <i class="bi bi-download"></i> Download Specs
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section id="brands" class="section-padding">
+      <div class="container">
+        <h2 class="text-center mb-5">Featured Brands</h2>
+        <div class="row align-items-center">
+          <div class="col-md-3 col-6 mb-4 text-center">
+            <img
+              src="./asset/images/philips.png"
+              class="img-fluid brand-logo"
+              alt="Philips"
+            />
+          </div>
+          <div class="col-md-3 col-6 mb-4 text-center">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 80'%3E%3Crect fill='%23e9ecef' width='150' height='80'/%3E%3Ctext x='75' y='45' text-anchor='middle' font-size='16' fill='%23333'%3ESYLVANIA%3C/text%3E%3C/svg%3E"
+              class="img-fluid brand-logo"
+              alt="Sylvania"
+            />
+          </div>
+          <div class="col-md-3 col-6 mb-4 text-center">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 80'%3E%3Crect fill='%23e9ecef' width='150' height='80'/%3E%3Ctext x='75' y='45' text-anchor='middle' font-size='16' fill='%23333'%3ECREE%3C/text%3E%3C/svg%3E"
+              class="img-fluid brand-logo"
+              alt="Cree"
+            />
+          </div>
+          <div class="col-md-3 col-6 mb-4 text-center">
+            <img
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 80'%3E%3Crect fill='%23e9ecef' width='150' height='80'/%3E%3Ctext x='75' y='45' text-anchor='middle' font-size='16' fill='%23333'%3EGE%3C/text%3E%3C/svg%3E"
+              class="img-fluid brand-logo"
+              alt="GE"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section-padding bg-light-custom">
+      <div class="container">
+        <h2 class="text-center mb-5">Product Gallery</h2>
+        <div class="row g-3">
+          <div class="col-md-4 col-6">
+            <div class="gallery-item">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ccircle cx='200' cy='150' r='80' fill='%23FFD700'/%3E%3C/svg%3E"
+                class="img-fluid rounded"
+                alt="Gallery 1"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="gallery-item">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Cpath d='M100 50 L300 50 L200 250 Z' fill='%23FFD700'/%3E%3C/svg%3E"
+                class="img-fluid rounded"
+                alt="Gallery 2"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="gallery-item">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ccircle cx='100' cy='100' r='30' fill='%23FFD700'/%3E%3Ccircle cx='300' cy='100' r='30' fill='%23FFD700'/%3E%3Ccircle cx='200' cy='200' r='30' fill='%23FFD700'/%3E%3C/svg%3E"
+                class="img-fluid rounded"
+                alt="Gallery 3"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="gallery-item">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Crect x='150' y='100' width='100' height='100' fill='%23FFD700' rx='10'/%3E%3C/svg%3E"
+                class="img-fluid rounded"
+                alt="Gallery 4"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="gallery-item">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Cpath d='M200 50 L250 150 L150 150 Z' fill='%23FFD700'/%3E%3C/svg%3E"
+                class="img-fluid rounded"
+                alt="Gallery 5"
+              />
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="gallery-item">
+              <img
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ccircle cx='200' cy='150' r='60' fill='%23FFD700' opacity='0.7'/%3E%3C/svg%3E"
+                class="img-fluid rounded"
+                alt="Gallery 6"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Form -->
+    <section id="feedback" class="section-padding">
+      <div class="container">
+        <h2 class="text-center mb-5">Share Your Feedback</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form class="needs-validation" novalidate>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" required />
+                  <div class="invalid-feedback">Please provide your name.</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid email.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="product" class="form-label">Product Category</label>
+                <select class="form-select" id="product" required>
+                  <option value="">Choose...</option>
+                  <option>LED Bulbs</option>
+                  <option>Spot Lights</option>
+                  <option>Decoration Lights</option>
+                  <option>Smart Lights</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a product category.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="rating" class="form-label">Rating</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="rating"
+                    id="rating5"
+                    value="5"
+                    required
+                  />
+                  <label class="form-check-label" for="rating5"
+                    >★★★★★ Excellent</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="rating"
+                    id="rating4"
+                    value="4"
+                  />
+                  <label class="form-check-label" for="rating4"
+                    >★★★★☆ Good</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="rating"
+                    id="rating3"
+                    value="3"
+                  />
+                  <label class="form-check-label" for="rating3"
+                    >★★★☆☆ Average</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="rating"
+                    id="rating2"
+                    value="2"
+                  />
+                  <label class="form-check-label" for="rating2"
+                    >★★☆☆☆ Fair</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="rating"
+                    id="rating1"
+                    value="1"
+                  />
+                  <label class="form-check-label" for="rating1"
+                    >★☆☆☆☆ Poor</label
+                  >
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Your Feedback</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  required
+                ></textarea>
+                <div class="invalid-feedback">
+                  Please provide your feedback.
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Submit Feedback
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advertisements Section -->
+    <section class="section-padding bg-light-custom">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Facilities</h2>
+        <div class="row">
+          <div class="col-md-3 col-6 mb-4 text-center">
+            <i class="bi bi-truck feature-icon"></i>
+            <h5 class="mt-3">Free Shipping</h5>
+            <p>On orders over $50</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4 text-center">
+            <i class="bi bi-shield-check feature-icon"></i>
+            <h5 class="mt-3">2 Year Warranty</h5>
+            <p>On all LED products</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4 text-center">
+            <i class="bi bi-arrow-repeat feature-icon"></i>
+            <h5 class="mt-3">30-Day Returns</h5>
+            <p>Easy return policy</p>
+          </div>
+          <div class="col-md-3 col-6 mb-4 text-center">
+            <i class="bi bi-headset feature-icon"></i>
+            <h5 class="mt-3">24/7 Support</h5>
+            <p>Customer service</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <h5>BrightWorld</h5>
+            <p>
+              Your trusted partner for premium LED lighting solutions since
+              2010.
+            </p>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#home" class="text-light text-decoration-none">Home</a>
+              </li>
+              <li>
+                <a href="#gallery" class="text-light text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="text-light text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#feedback" class="text-light text-decoration-none"
+                  >Queries</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-light text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5>Categories</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#bulbs" class="text-light text-decoration-none"
+                  >LED Bulbs</a
+                >
+              </li>
+              <li>
+                <a href="#spotlights" class="text-light text-decoration-none"
+                  >Spot Lights</a
+                >
+              </li>
+              <li>
+                <a href="#decoration" class="text-light text-decoration-none"
+                  >Decoration Lights</a
+                >
+              </li>
+              <li>
+                <a href="#smart" class="text-light text-decoration-none"
+                  >Smart Lights</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4">
+            <h5>Contact Info</h5>
+            <p><i class="bi bi-geo-alt"></i> 123 Light Street, LED City</p>
+            <p><i class="bi bi-telephone"></i> 1-800-LED-LIGHT</p>
+            <p><i class="bi bi-envelope"></i> info@brightworld.com</p>
+            <div>
+              <a href="#" class="text-light me-3"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-light me-3"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="text-center">
+          <p>
+            &copy; 2025 BrightWorld. All rights reserved. |
+            <a href="#" class="text-light">Sitemap</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Form Validation Script -->
+    <script>
+      // Form validation
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            var forms = document.getElementsByClassName("needs-validation");
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
